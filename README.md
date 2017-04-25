@@ -1,6 +1,6 @@
 # npmdoc-jasmine-spec-reporter
 
-#### api documentation for  [jasmine-spec-reporter (v4.0.0)](https://github.com/bcaudan/jasmine-spec-reporter)  [![npm package](https://img.shields.io/npm/v/npmdoc-jasmine-spec-reporter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jasmine-spec-reporter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jasmine-spec-reporter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jasmine-spec-reporter)
+#### basic api documentation for  [jasmine-spec-reporter (v4.0.0)](https://github.com/bcaudan/jasmine-spec-reporter)  [![npm package](https://img.shields.io/npm/v/npmdoc-jasmine-spec-reporter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jasmine-spec-reporter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jasmine-spec-reporter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jasmine-spec-reporter)
 
 #### Spec reporter for jasmine behavior-driven development framework
 
@@ -95,7 +95,8 @@
         "test:integration": "npm run pretest && npm run examples:update && jasmine JASMINE_CONFIG_PATH=spec/support/jasmine-integration.json"
     },
     "types": "built/main.d.ts",
-    "version": "4.0.0"
+    "version": "4.0.0",
+    "bin": {}
 }
 ```
 
