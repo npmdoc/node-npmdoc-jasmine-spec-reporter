@@ -134,30 +134,6 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jasmine-spec-reporter.</span>spec_colors_processor</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jasmine-spec-reporter.</span>spec_durations_processor</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jasmine-spec-reporter.</span>spec_prefixes_processor</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jasmine-spec-reporter.</span>spec_reporter</span>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jasmine-spec-reporter.</span>suite_numbering_processor</span>
 
         </li>
@@ -443,58 +419,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.jasmine-spec-reporter.spec_colors_processor">module jasmine-spec-reporter.spec_colors_processor</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jasmine-spec-reporter.spec_colors_processor.SpecColorsProcessor">
-            function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_colors_processor.</span>SpecColorsProcessor
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jasmine-spec-reporter.spec_durations_processor">module jasmine-spec-reporter.spec_durations_processor</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jasmine-spec-reporter.spec_durations_processor.SpecDurationsProcessor">
-            function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_durations_processor.</span>SpecDurationsProcessor
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jasmine-spec-reporter.spec_prefixes_processor">module jasmine-spec-reporter.spec_prefixes_processor</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jasmine-spec-reporter.spec_prefixes_processor.SpecPrefixesProcessor">
-            function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_prefixes_processor.</span>SpecPrefixesProcessor
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jasmine-spec-reporter.spec_reporter">module jasmine-spec-reporter.spec_reporter</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jasmine-spec-reporter.spec_reporter.SpecReporter">
-            function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_reporter.</span>SpecReporter
-            <span class="apidocSignatureSpan">(configuration)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.jasmine-spec-reporter.suite_numbering_processor">module jasmine-spec-reporter.suite_numbering_processor</a><ol>
 
         <li>
@@ -565,14 +489,6 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-
-
-
-
-
-
-
-
 
 
 
@@ -1367,146 +1283,6 @@ SpecReporter.initProcessors = function (configuration) {
     var displayProcessors = [
         new default_processor_1.DefaultProcessor(configuration),
 ...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jasmine-spec-reporter.spec_colors_processor" id="apidoc.module.jasmine-spec-reporter.spec_colors_processor">module jasmine-spec-reporter.spec_colors_processor</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jasmine-spec-reporter.spec_colors_processor.SpecColorsProcessor" id="apidoc.element.jasmine-spec-reporter.spec_colors_processor.SpecColorsProcessor">
-        function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_colors_processor.</span>SpecColorsProcessor
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function SpecColorsProcessor() {
-    return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    this.displayProcessors = ExecutionDisplay.initProcessors(this.configuration);
-    this.hasCustomDisplaySpecStarted = ExecutionDisplay.hasCustomDisplaySpecStarted(this.displayProcessors);
-}
-ExecutionDisplay.initProcessors = function (configuration) {
-    var displayProcessors = [
-        new default_processor_1.DefaultProcessor(configuration),
-        new spec_prefixes_processor_1.SpecPrefixesProcessor(configuration),
-        new spec_colors_processor_1.<span class="apidocCodeKeywordSpan">SpecColorsProcessor</span>(configuration),
-    ];
-    if (configuration.spec.displayDuration) {
-        displayProcessors.push(new spec_durations_processor_1.SpecDurationsProcessor(configuration));
-    }
-    if (configuration.suite.displayNumber) {
-        displayProcessors.push(new suite_numbering_processor_1.SuiteNumberingProcessor(configuration));
-    }
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jasmine-spec-reporter.spec_durations_processor" id="apidoc.module.jasmine-spec-reporter.spec_durations_processor">module jasmine-spec-reporter.spec_durations_processor</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jasmine-spec-reporter.spec_durations_processor.SpecDurationsProcessor" id="apidoc.element.jasmine-spec-reporter.spec_durations_processor.SpecDurationsProcessor">
-        function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_durations_processor.</span>SpecDurationsProcessor
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function SpecDurationsProcessor() {
-    return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    ExecutionDisplay.initProcessors = function (configuration) {
-var displayProcessors = [
-    new default_processor_1.DefaultProcessor(configuration),
-    new spec_prefixes_processor_1.SpecPrefixesProcessor(configuration),
-    new spec_colors_processor_1.SpecColorsProcessor(configuration),
-];
-if (configuration.spec.displayDuration) {
-    displayProcessors.push(new spec_durations_processor_1.<span class="apidocCodeKeywordSpan">SpecDurationsProcessor</span>(configuration
-));
-}
-if (configuration.suite.displayNumber) {
-    displayProcessors.push(new suite_numbering_processor_1.SuiteNumberingProcessor(configuration));
-}
-if (configuration.customProcessors) {
-    configuration.customProcessors.forEach(function (Processor) {
-        displayProcessors.push(new Processor(configuration));
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jasmine-spec-reporter.spec_prefixes_processor" id="apidoc.module.jasmine-spec-reporter.spec_prefixes_processor">module jasmine-spec-reporter.spec_prefixes_processor</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jasmine-spec-reporter.spec_prefixes_processor.SpecPrefixesProcessor" id="apidoc.element.jasmine-spec-reporter.spec_prefixes_processor.SpecPrefixesProcessor">
-        function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_prefixes_processor.</span>SpecPrefixesProcessor
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function SpecPrefixesProcessor() {
-    return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    colors_display_1.ColorsDisplay.init(this.configuration);
-    this.displayProcessors = ExecutionDisplay.initProcessors(this.configuration);
-    this.hasCustomDisplaySpecStarted = ExecutionDisplay.hasCustomDisplaySpecStarted(this.displayProcessors);
-}
-ExecutionDisplay.initProcessors = function (configuration) {
-    var displayProcessors = [
-        new default_processor_1.DefaultProcessor(configuration),
-        new spec_prefixes_processor_1.<span class="apidocCodeKeywordSpan">SpecPrefixesProcessor</span>(configuration),
-        new spec_colors_processor_1.SpecColorsProcessor(configuration),
-    ];
-    if (configuration.spec.displayDuration) {
-        displayProcessors.push(new spec_durations_processor_1.SpecDurationsProcessor(configuration));
-    }
-    if (configuration.suite.displayNumber) {
-        displayProcessors.push(new suite_numbering_processor_1.SuiteNumberingProcessor(configuration));
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jasmine-spec-reporter.spec_reporter" id="apidoc.module.jasmine-spec-reporter.spec_reporter">module jasmine-spec-reporter.spec_reporter</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jasmine-spec-reporter.spec_reporter.SpecReporter" id="apidoc.element.jasmine-spec-reporter.spec_reporter.SpecReporter">
-        function <span class="apidocSignatureSpan">jasmine-spec-reporter.spec_reporter.</span>SpecReporter
-        <span class="apidocSignatureSpan">(configuration)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function SpecReporter(configuration) {
-    this.specs = {
-        failed: [],
-        pending: [],
-        successful: []
-    };
-    this.configuration = configuration_parser_1.ConfigurationParser.parse(configuration);
-    var displayProcessors = SpecReporter.initProcessors(this.configuration);
-    var print = this.configuration.print;
-    this.logger = new logger_1.Logger(displayProcessors, print);
-    this.display = new execution_display_1.ExecutionDisplay(this.configuration, this.logger, this.specs, displayProcessors);
-    this.summary = new summary_display_1.SummaryDisplay(this.logger, this.configuration, this.specs);
-    this.metrics = new execution_metrics_1.ExecutionMetrics();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
